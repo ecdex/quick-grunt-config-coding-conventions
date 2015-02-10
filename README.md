@@ -8,12 +8,19 @@ Module containing a generator for configurations for Grunt tasks for coding-conv
 
 To use, list this package along with grunt-contrib-jshint and grunt-jscs in
 your package.json.  Require the other packages from your Gruntfile.js
-normally (individually or via matchdep.  Requiring this module returns
+normally (individually or via matchdep).  Requiring this module returns
 a function with the following signature:
 
 `configurationHash = makeConfig(grunt, optionalArrayOfDirectoryNameStrings)`
 
-You can also get the .jscsrc and .jshintrc for your files by
+You can also get the .jscsrc and .jshintrc for your project by creating
+symbolic links in the root of your project to the copies of these files
+under `node_modules/quick-grunt-config-coding-conventions/`.  (Obviously
+if you need customized versions of these files that differ from what
+this module provides, you should copy what you like and make an independent
+file in your project.  If you edit these files via a symbolic link, your
+changes will be lost next time NPM updates the content of this package's
+directory.)
 
 A Gruntfile.js that did nothing but install the configuration in this module
 could look like:
@@ -44,7 +51,8 @@ or `*bower_components*` are automatically excluded.
 
 Contributions and suggestions are welcome, including a set of unit tests
 covering the existing behavior.  Right now the "reference user" for this
-module is https://github.com/ecdex/tsme.git.  Running 'grunt' in that
+module is [https://github.com/ecdex/tsme.git(https://github.com/ecdex/tsme.git)].
+Running 'grunt' in that
 repository after installing your modified version of this module should
 run clean, and should correctly find errors you introduce in JavaScript
 files in the 'app' and 'build_components' directories.
