@@ -2,9 +2,11 @@ var _ = require("lodash"),
     Glob = require("glob").Glob,
     path = require("path");
 
-module.exports = function (grunt, extraTopLevelDirectories) {
+module.exports = function (grunt, extraTopLevelDirectories, extraExcludeSubstrings) {
   extraTopLevelDirectories = extraTopLevelDirectories || [];
-  var excludedDirectoryNameSubstrings = ["node_modules", "bower_components"],
+  extraExcludeSubstrings = extraExcludeSubstrings || [];
+
+  var excludedDirectoryNameSubstrings = ["node_modules", "bower_components"].concat(extraExcludeSubstrings),
       implicitTopLevelDirectories = ["app", "lib", "test", "spec"],
       topLevelDirectories = _.uniq(implicitTopLevelDirectories.concat(extraTopLevelDirectories)),
       lintableFiles = {};
