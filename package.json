@@ -1,6 +1,6 @@
 {
   "name"        : "quick-grunt-config-coding-conventions",
-  "version"     : "0.0.2",
+  "version"     : "0.0.3",
   "description" : "Module containing a generator for configurations for Grunt tasks for coding-conventions checks.",
   "author"      : "Glen E. Ivey",
   "homepage": "https://github.com/ecdex/quick-grunt-config-coding-conventions",
