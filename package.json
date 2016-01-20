@@ -1,6 +1,6 @@
 {
   "name"        : "quick-grunt-config-coding-conventions",
-  "version"     : "0.0.5",
+  "version"     : "0.0.6",
   "description" : "Module containing a generator for configurations for Grunt tasks for coding-conventions checks.",
   "author"      : "Glen E. Ivey",
   "homepage": "https://github.com/ecdex/quick-grunt-config-coding-conventions",
@@ -9,18 +9,18 @@
     "url" : "https://github.com/ecdex/quick-grunt-config-coding-conventions.git"
   },
   "bugs": { "url": "https://github.com/ecdex/quick-grunt-config-coding-conventions/issues" },
-  "licenses": "MIT",
+  "license": "MIT",
   "engines": {
-    "node": "~0.10.0"
+    "node": "~5.4.1"
   },
   "dependencies": {
-    "glob": "^6.0.1",
-    "lodash": "^3.1.0"
+    "glob": "^6.0.4",
+    "lodash": "^4.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.3",
-    "grunt-jscs": "^2.3.0",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-jscs": "^2.6.0",
     "matchdep": "^1.0.0"
   },
   "peerDependencies": {
