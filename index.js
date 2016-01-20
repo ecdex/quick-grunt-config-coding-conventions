@@ -17,7 +17,7 @@ module.exports = function (grunt, extraTopLevelDirectories, extraExcludeSubstrin
         glob = new Glob(path.join(topLevelDir, "**"), { sync: true }),
         directories = _.compact(_.map(glob.cache, function (value, key) { return (typeof value === "object") ? key : null; }));
     directories = _.reject(directories, function (directory) {
-      return _.any(excludedDirectoryNameSubstrings, function (substring) {
+      return _.some(excludedDirectoryNameSubstrings, function (substring) {
         // use a loose match so we get things like 'old_node_modules' and 'bower_components.bak'
         return directory.indexOf(substring) > -1;
       });
