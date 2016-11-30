@@ -45,13 +45,13 @@ can include additional directory trees to scan for JavaScript files by
 including each tree's root directory name in the second optional array
 argument to the function returned from require.
 
-Directories under any of the roots listed which match the patterns `*node_modules*`
-or `*bower_components*` are automatically excluded.
+Directories under any of the roots listed which match the patterns *`node_modules`*
+or *`bower_components`* are automatically excluded.
 
 
 Contributions and suggestions are welcome, including a set of unit tests
 covering the existing behavior.  Right now the "reference user" for this
-module is [https://github.com/ecdex/tsme.git(https://github.com/ecdex/tsme.git)].
+module is [https://github.com/ecdex/tsme.git](https://github.com/ecdex/tsme.git).
 Running 'grunt' in that
 repository after installing your modified version of this module should
 run clean, and should correctly find errors you introduce in JavaScript
